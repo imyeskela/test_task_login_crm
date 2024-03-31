@@ -1,0 +1,45 @@
+@font-face {
+    font-weight: 400;
+    font-family: Gilroy;
+    src: url("../Assets/Fonts/GILROY-REGULAR.TTF");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: Gilroy;
+    src: url("../Assets/Fonts/GILROY-MEDIUM.TTF");
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: Gilroy;
+    src: url("../Assets/Fonts/GILROY-SEMIBOLD.TTF");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: Gilroy;
+    src: url("../Assets/Fonts/GILROY-BOLD.TTF");
+}
+  
+
+.html{
+    font-size: 14px;
+    font-family: "Gilroy";
+    font-size: 700;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.input img {
+    width: 1.5rem;
+}
