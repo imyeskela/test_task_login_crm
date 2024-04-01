@@ -22,24 +22,30 @@
     src: url("../Assets/Fonts/GILROY-BOLD.TTF");
 }
   
-
-.html{
+html {
     font-size: 14px;
+}
+
+body{
     font-family: "Gilroy";
-    font-size: 700;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20vh;
+    align-content: center;
     justify-content: center;
 }
 .input {
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-content: center;
+    
+
 }
 .input img {
-    width: 1.5rem;
+    width: 1.8rem;
 }
