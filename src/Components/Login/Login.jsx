@@ -10,15 +10,14 @@ import { useEffect, useState } from 'react';
 const Login = ({setLogged, setFullname}) => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    let loginForm = register('login')
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    let loginForm = watch('log')
     axios.get('http://localhost:5000/login/' ).then((res) =>{
         setLogin(res.data['login'])
         setPassword(res.data['password'])
         setFullname(res.data['firstName'] + ' ' + res.data['middleName'] + ' ' + res.data['lastName'])})
     const onSubmit = (data) => {
         console.log('hello')}
-    
     return (
         <div className="container">
             <div className="inputs">
@@ -35,10 +34,12 @@ const Login = ({setLogged, setFullname}) => {
                         <input type="password" {...register("password", { 
                             required: true,
                             validate: (val) => {
-                                if (val !== password && register('log') !== login){
+                                if (val !== password || loginForm !== login){
+                                    setLogged(false)
                                     return 'Incorrect login'
                                 }
                                 else{
+
                                     setLogged(true)
                                 }
                             }})}/>
